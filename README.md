@@ -2,6 +2,14 @@
 
 Get list of countries and list of states per country worldwide
 
+## Installation
+
+```bash
+yarn add cs-list
+# or
+npm install cs-list
+```
+
 ## Types
 
 ```ts
