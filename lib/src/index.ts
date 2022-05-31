@@ -11,10 +11,9 @@ export const getStatesByCode = (countryCode: string) =>
   states.filter((state) => state.countryCode === countryCode);
 
 export const getStatesByName = (countryName: string) => {
-  const code = countries.find(
+  const country = countries.find(
     (country) => country.name.toUpperCase() === countryName.toUpperCase()
-  )?.code;
-
-  if (code) return getStatesByCode(code);
+  );
+  if (country) return getStatesByCode(country.code);
   return null;
 };
