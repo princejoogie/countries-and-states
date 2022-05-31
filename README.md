@@ -21,8 +21,8 @@ type State = {
 
 1. `getCountries() => Country[]`
 2. `getStates() => State[]`
-3. `getStatesByCode() => State[]`
-4. `getStatesByName() => State[]`
+3. `getStatesByCode(countryCode: string) => State[]`
+4. `getStatesByName(countryName: string) => State[]`
 
 ## Usage
 
