@@ -1,4 +1,4 @@
-import { getStatesByCode, getStatesByName } from "./lib";
+import { getStatesByCode, getStatesByName } from "./lib/dist";
 
 const test = () => {
   console.log(getStatesByCode("AU"));
