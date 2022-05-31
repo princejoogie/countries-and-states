@@ -47,7 +47,7 @@ const main = () => {
   const newCountries = Object.values(countriesObj);
 
   fs.writeFile(
-    `${__dirname}/lib/states.ts`,
+    `${__dirname}/lib/src/states.ts`,
     `export const states = ${JSON.stringify(newStates)};`,
     (err) => {
       if (err) {
@@ -57,7 +57,7 @@ const main = () => {
   );
 
   fs.writeFile(
-    `${__dirname}/lib/countries.ts`,
+    `${__dirname}/lib/src/countries.ts`,
     `export const countries = ${JSON.stringify(newCountries)};`,
     (err) => {
       if (err) {
@@ -66,7 +66,7 @@ const main = () => {
     }
   );
 
-  console.log("[DONE] - Data written to lib/");
+  console.log("[DONE] - Data written to lib/src/");
 };
 
 main();
