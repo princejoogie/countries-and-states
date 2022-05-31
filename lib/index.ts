@@ -7,9 +7,8 @@ export type State = typeof states[number];
 export const getCountries = () => [...countries];
 export const getStates = () => [...states];
 
-export const getStatesByCode = (
-  countryCode: typeof countries[number]["code"]
-) => states.filter((state) => state.countryCode === countryCode);
+export const getStatesByCode = (countryCode: string) =>
+  states.filter((state) => state.countryCode === countryCode);
 
 export const getStatesByName = (countryName: string) => {
   const code = countries.find(

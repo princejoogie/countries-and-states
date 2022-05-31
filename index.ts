@@ -1,3 +1,7 @@
+/**
+ * from https://github.com/dr5hn/countries-states-cities-database
+ * files ares too big to be included in frontend apps (1.5MB)
+ */
 import states from "./states.json";
 import fs from "fs";
 
@@ -42,17 +46,9 @@ const main = () => {
   const newStates = Object.values(statesObj);
   const newCountries = Object.values(countriesObj);
 
-  console.log(newStates[0]);
-  console.log(newCountries[0]);
-
-  console.log({
-    statesLength: newStates.length,
-    countriesLength: newCountries.length,
-  });
-
   fs.writeFile(
     `${__dirname}/lib/states.ts`,
-    `export const states = ${JSON.stringify(newStates)} as const;`,
+    `export const states = ${JSON.stringify(newStates)};`,
     (err) => {
       if (err) {
         console.error(err);
@@ -62,13 +58,15 @@ const main = () => {
 
   fs.writeFile(
     `${__dirname}/lib/countries.ts`,
-    `export const countries = ${JSON.stringify(newCountries)} as const;`,
+    `export const countries = ${JSON.stringify(newCountries)};`,
     (err) => {
       if (err) {
         console.error(err);
       }
     }
   );
+
+  console.log("[DONE] - Data written to lib/");
 };
 
 main();
