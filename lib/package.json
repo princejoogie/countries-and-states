@@ -1,6 +1,6 @@
 {
   "name": "cs-list",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Country States list",
   "main": "dist/index.js",
   "repository": "https://github.com/princejoogie/countries-and-states",
