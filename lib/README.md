@@ -37,7 +37,7 @@ type State = {
 1. Get countries list
 
 ```ts
-import { getCountries } from "./lib";
+import { getCountries } from "cs-list";
 
 const countries = getCountries();
 ```
@@ -45,7 +45,7 @@ const countries = getCountries();
 2. Get states list
 
 ```ts
-import { getStates } from "./lib";
+import { getStates } from "cs-list";
 
 const states = getStates();
 ```
@@ -53,7 +53,7 @@ const states = getStates();
 3. By country code
 
 ```ts
-import { getStatesByCode } from "./lib";
+import { getStatesByCode } from "cs-list";
 
 const australiaStates = getStatesByCode("AU");
 ```
@@ -61,7 +61,7 @@ const australiaStates = getStatesByCode("AU");
 4. By country name
 
 ```ts
-import { getStatesByName } from "./lib";
+import { getStatesByName } from "cs-list";
 
 const philippineStates = getStatesByName("Philippines");
 
